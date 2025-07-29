@@ -2443,7 +2443,7 @@ in
                 then ""
                 else "-C ${hooks.cmake-format.settings.configPath}";
             in
-            "${hooks.cmake-format.package}/bin/cmake-format --check ${maybeConfigPath}";
+            "${hooks.cmake-format.package}/bin/cmake-format --in-place ${maybeConfigPath}";
           files = "\\.cmake$|CMakeLists.txt";
         };
       commitizen =
